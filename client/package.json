@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "watchify ./src/main.js -o ./src/bundle.js -v",
-    "watch-client": "watchify ./src/client.js -o ./src/bundle-client.js -v",
+    "watch-producer": "watchify ./src/producer.js -o ./src/bundle-producer.js -v",
+    "watch-consumer": "watchify ./src/consumer.js -o ./src/bundle-consumer.js -v",
     "start" : "live-server --https=./https.conf.js ./src"
   },
   "keywords": [],
