@@ -4,7 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "browserify ./src/main.js -o ./src/bundle.js && live-server --https=./https.conf.js ./src"
+    "watch": "watchify ./src/main.js -o ./src/bundle.js -v",
+    "watch-client": "watchify ./src/client.js -o ./src/bundle-client.js -v",
+    "start" : "live-server --https=./https.conf.js ./src"
   },
   "keywords": [],
   "author": "",

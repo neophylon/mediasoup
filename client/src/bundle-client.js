@@ -17476,18 +17476,18 @@ const websocketURL = 'wss://192.168.1.152:8000/ws'
 let socket;
 
 document.addEventListener("DOMContentLoaded",function() {
-    btnCam = document.getElementById("btn_webcam");
-    btnScreen = document.getElementById("btn_screen");
+    // btnCam = document.getElementById("btn_webcam");
+    // btnScreen = document.getElementById("btn_screen");
     btnSub = document.getElementById("btn_subscribe");
-    textWebcam = document.getElementById("webcam_status");
-    textScreen = document.getElementById("screen_status");
+    // textWebcam = document.getElementById("webcam_status");
+    // textScreen = document.getElementById("screen_status");
     textSubscribe = document.getElementById("subscribe_status");
-    localVideo = document.getElementById("localVideo");
+    // localVideo = document.getElementById("localVideo");
     remoteVideo = document.getElementById("remoteVideo");
 
     //button event listeners
-    btnCam.addEventListener('click', publish);
-    btnScreen.addEventListener('click', publish);
+    // btnCam.addEventListener('click', publish);
+    // btnScreen.addEventListener('click', publish);
     btnSub.addEventListener('click', subscribe);
 });
 
@@ -17725,15 +17725,15 @@ const onProducerTransportCreated = async (event) => {
 
 const onRouterCapabilities = (resp) => {
     loadDevice(resp.data);
-    btnCam.disabled = false;
-    btnScreen.disabled = false;
+    // btnCam.disabled = false;
+    // btnScreen.disabled = false;
 }
 
 const publish = (e) => {
     isWebcam = ( e.target.id === 'btn_webcam' );
     textPublish = isWebcam ? textWebcam : textScreen;
-    btnScreen.disabled = true;
-    btnCam.disabled = true;
+    // btnScreen.disabled = true;
+    // btnCam.disabled = true;
 
     const message = {
         type: 'createProducerTransport',
