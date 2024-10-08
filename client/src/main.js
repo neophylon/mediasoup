@@ -133,8 +133,16 @@ const onSubTransportCreated = async (event) => {
             }
         })
     });
-
-    transport.on('connectionStatechange', (state) => {
+    /**
+     * state : connectionState
+     *  closed
+     * failed
+     * disconnected
+     * new
+     * connecting
+     * connected
+     */
+    transport.on('connectionstatechange', (state) => {
         console.log('connectionStatechange : ==> ',state);
         switch (state) {
             case 'connecting':
@@ -228,7 +236,7 @@ const onProducerTransportCreated = async (event) => {
     });
     //end transport producer
     //connection state change begin
-    transport.on('connectionStatechange', (state) => {
+    transport.on('connectionstatechange', (state) => {
         console.log('connectionStatechange : ==> ',state);
         switch (state) {
             case 'connecting':
